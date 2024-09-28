@@ -1,0 +1,6 @@
+[env]
+VCPKGRS_DYNAMIC = "1"
+VCPKG_ROOT = "C:\\Program Files\\devtools\\vcpkg"
+
+[target.'cfg(all(windows, target_env = "msvc"))']
+rustflags = ["-C", "target-feature=+crt-static"]
