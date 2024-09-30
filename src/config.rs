@@ -2,6 +2,10 @@ use serde::{Deserialize, Serialize};
 use anyhow::{Result, Context};
 use config::{Config, File};
 
+
+/*
+TODO：首次启动自动创建 config.toml，并提供示例 config.toml
+*/
 #[derive(Debug, Deserialize, Serialize)]
 pub struct AppConfig {
     pub proxy_network: String,

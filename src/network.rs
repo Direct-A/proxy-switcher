@@ -9,6 +9,12 @@ use std::sync::Arc;
 use sysinfo::System;
 use tokio::time::{interval, Duration};
 
+
+/*
+TODO：更加详细的网络检查，检查网络名称，网卡设备名，IP 等等
+TODO：更加全面的网络代理，不需要单独再为 ssh 进行设置
+*/
+
 pub async fn run_network_check_loop(app_state: Arc<AppState>) -> Result<()> {
     let mut sys = System::new_all();
     let mut interval = interval(Duration::from_secs(app_state.config.check_interval));
